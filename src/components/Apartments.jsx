@@ -8,40 +8,53 @@ const apartmentsData = [
   {
     id: 1,
     name: 'Departamento Familiar',
-    description: 'Amplio departamento con vista al jardín, ideal para familias con niños. Cuenta con dos dormitorios y todas las comodidades.',
+    description: 'Amplio departamento con vista al jardín...',
     capacity: '6 personas',
     bedrooms: '2 dormitorios',
     bathrooms: '1 baño',
     size: '65m²',
     price: '$15,000',
     priceDetail: 'por noche en temporada alta',
-    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+    images: [
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      'https://images.unsplash.com/photo-1505691723518-36a5ac3be353?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      'https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+    ]
   },
   {
     id: 2,
     name: 'Suite Deluxe',
-    description: 'Departamento de lujo con vista parcial al mar. Decoración moderna y elegante con todas las comodidades premium.',
+    description: 'Departamento de lujo con vista parcial al mar...',
     capacity: '4 personas',
     bedrooms: '2 dormitorios',
     bathrooms: '2 baños',
     size: '55m²',
     price: '$18,000',
     priceDetail: 'por noche en temporada alta',
-    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+    images: [
+      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      'https://images.unsplash.com/photo-1618221214613-1e53301c5dcf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+    ]
   },
   {
     id: 3,
     name: 'Monoambiente Costero',
-    description: 'Acogedor monoambiente a pocas cuadras de la playa. Perfecto para parejas o viajeros solitarios que buscan comodidad.',
+    description: 'Acogedor monoambiente a pocas cuadras de la playa...',
     capacity: '2 personas',
     bedrooms: '1 ambiente',
     bathrooms: '1 baño',
     size: '35m²',
     price: '$12,000',
     priceDetail: 'por noche en temporada alta',
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+    images: [
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+    ]
   }
 ];
+
 
 const ApartmentCard = ({ apartment, onInquiryClick, index }) => {
   return (
@@ -99,13 +112,14 @@ const ApartmentCard = ({ apartment, onInquiryClick, index }) => {
             <p className="text-xs text-muted-foreground">{apartment.priceDetail}</p>
           </div>
           <Button 
-            onClick={() => onInquiryClick(apartment.name)}
-            className="bg-primary hover:bg-primary/90"
-            size="sm"
-          >
-            <Calendar className="mr-2 h-4 w-4" />
-            Consultar
-          </Button>
+  onClick={() => onInquiryClick(apartment)} // 👈 ahora pasa el objeto completo
+  className="bg-primary hover:bg-primary/90"
+  size="sm"
+>
+  <Calendar className="mr-2 h-4 w-4" />
+  Consultar
+</Button>
+
         </div>
       </div>
     </motion.div>

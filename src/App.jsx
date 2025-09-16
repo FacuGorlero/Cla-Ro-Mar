@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Toaster } from '@/components/ui/toaster';
@@ -6,20 +5,20 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Apartments from '@/components/Apartments';
-import Gallery from '@/components/Gallery';
+import ApartmentGallery from '@/components/ApartmentGallery';
 import Location from '@/components/Location';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 function App() {
-  const [predefinedMessage, setPredefinedMessage] = useState('');
+  const [selectedApartment, setSelectedApartment] = useState(null);
 
-  const handleApartmentInquiry = (apartmentName) => {
-    setPredefinedMessage(`Estoy interesado en saber la disponibilidad del ${apartmentName}`);
-    const contactSection = document.getElementById('contacto');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleApartmentInquiry = (apartment) => {
+    setSelectedApartment(apartment); // 👈 abre la galería sin mover el scroll
+  };
+
+  const handleBackToList = () => {
+    setSelectedApartment(null); // 👈 vuelve al listado sin mover el scroll
   };
 
   return (
@@ -37,16 +36,21 @@ function App() {
         >
           <Features />
         </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="beach-pattern"
-        >
-          <Apartments onInquiry={handleApartmentInquiry} />
-        </motion.div>
+
+        {/* 👇 Si hay un depto seleccionado → mostramos la galería */}
+        {selectedApartment ? (
+          <ApartmentGallery apartment={selectedApartment} onBack={handleBackToList} />
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="beach-pattern"
+          >
+            <Apartments onInquiry={handleApartmentInquiry} />
+          </motion.div>
+        )}
         
         <motion.div
           initial={{ opacity: 0 }}
@@ -54,7 +58,6 @@ function App() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Gallery />
         </motion.div>
         
         <motion.div
@@ -72,7 +75,7 @@ function App() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Contact predefinedMessage={predefinedMessage} />
+          <Contact />
         </motion.div>
       </main>
       
