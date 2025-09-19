@@ -3,6 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Users, Bed, Bath, Maximize, Calendar } from 'lucide-react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const apartmentsData = [
   {
@@ -16,9 +20,38 @@ const apartmentsData = [
     price: '$15,000',
     priceDetail: 'por noche en temporada alta',
     images: [
-      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1505691723518-36a5ac3be353?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+      "images/apartments1/IMG-20250102-WA0022.jpg",
+      "images/apartments1/IMG-20250102-WA0023.jpg",
+      "images/apartments1/IMG-20250102-WA0024~2.jpg",
+     " images/apartments1/IMG-20250102-WA0025~2.jpg",
+      "images/apartments1/IMG-20250102-WA0027.jpg",
+      "images/apartments1/IMG-20250102-WA0028~2.jpg",
+      "images/apartments1/IMG-20250102-WA0029~2.jpg",
+      "images/apartments1/IMG-20250102-WA0030.jpg",
+      "images/apartments1/IMG-20250102-WA0031.jpg",
+      "images/apartments1/IMG-20250102-WA0033~2.jpg",
+      "images/apartments1/IMG-20250102-WA0034~2.jpg",
+      "images/apartments1/IMG-20250102-WA0035~2.jpg",
+     " images/apartments1/IMG-20250103-WA0010.jpg",
+      "images/apartments1/IMG-20250103-WA0011.jpg",
+      "images/apartments1/IMG-20250103-WA0012.jpg",
+      "images/apartments1/IMG-20250103-WA0013.jpg",
+      "images/apartments1/IMG-20250103-WA0014.jpg",
+      "images/apartments1/IMG-20250103-WA0016.jpg",
+      "images/apartments1/IMG-20250103-WA0017.jpg",
+      "images/apartments1/IMG-20250103-WA0019.jpg",
+      "images/apartments1/IMG-20250103-WA0020.jpg",
+      "images/apartments1/IMG-20250103-WA0021.jpg",
+      "images/apartments1/IMG-20250103-WA0022.jpg",
+    "  images/apartments1/IMG-20250103-WA0023.jpg",
+      "images/apartments1/IMG-20250103-WA0024.jpg",
+      "images/apartments1/IMG-20250103-WA0025.jpg",
+      "images/apartments1/IMG-20250103-WA0026.jpg",
+      "images/apartments1/IMG-20250103-WA0027.jpg",
+      "images/apartments1/IMG-20250103-WA0028.jpg",
+      
+
+
     ]
   },
   {
@@ -59,34 +92,53 @@ const apartmentsData = [
 const ApartmentCard = ({ apartment, onInquiryClick, index }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }} // Contenedor animado con framer-motion
-      whileInView={{ opacity: 1, y: 0 }}  // Empieza invisible y desplazado hacia abajo
-      transition={{ duration: 0.5, delay: index * 0.1 }}// Cuando aparece en pantalla → se vuelve visible y sube
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
       className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
     >
-      <div className="relative h-64 overflow-hidden" >   {/* Imagen del departamento // relative → permite posicionar elementos absolutos encima // h-64 → altura fija de 16rem // overflow-hidden → oculta zoom de la imagen*/}
-        <img 
-          src={apartment.image}  // URL de la imagen del depto
-          alt={apartment.name} // Texto alternativo accesible
-
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-          // w-full h-full → ocupa todo el ancho y alto
-          // object-cover → recorta la imagen sin deformarla
-          // transition-transform duration-500 → animación suave en transform de 0.5s
-          // hover:scale-110 → hace zoom al 110% al pasar el mouse
+      {/* Carrusel de imágenes */}
+      <div className="relative h-64 overflow-hidden">
+        <Swiper
+  modules={[Navigation, Autoplay]}
+  spaceBetween={10}
+  slidesPerView={1}
+  loop
+  autoplay={{ delay: 3000 }}
+  navigation
+  className="h-full"
+>
+  {apartment.images.map((img, i) => (
+    <SwiperSlide key={i}>
+      <div
+        onClick={() => onInquiryClick(apartment)}
+        className="cursor-pointer h-full w-full overflow-hidden"
+      >
+        <img
+          src={img}
+          alt={`${apartment.name} ${i + 1}`}
+          className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
         />
-          {/* Precio flotante sobre la imagen */}
-          
-        <div className="absolute top-4 right-4 bg-secondary text-black font-semibold py-1 px-3 rounded-full"> 
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
+        {/* Precio flotante */}
+        <div className="absolute top-4 right-4 bg-secondary text-black font-semibold py-1 px-3 rounded-full">
           {apartment.price}
         </div>
       </div>
-      
+
+      {/* Info del departamento */}
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold mb-2">{apartment.name}</h3>
-        <p className="text-muted-foreground mb-4 text-sm flex-grow">{apartment.description}</p>
-        
+        <p className="text-muted-foreground mb-4 text-sm flex-grow">
+          {apartment.description}
+        </p>
+
         <div className="grid grid-cols-2 gap-3 mb-6 text-sm">
           <div className="flex items-center">
             <Users className="h-4 w-4 text-primary mr-2" />
@@ -105,27 +157,25 @@ const ApartmentCard = ({ apartment, onInquiryClick, index }) => {
             <span>{apartment.size}</span>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-between mt-auto">
           <div>
             <p className="text-lg font-bold text-primary">{apartment.price}</p>
             <p className="text-xs text-muted-foreground">{apartment.priceDetail}</p>
           </div>
-          <Button 
-  onClick={() => onInquiryClick(apartment)} // 👈 ahora pasa el objeto completo
-  className="bg-primary hover:bg-primary/90"
-  size="sm"
->
-  <Calendar className="mr-2 h-4 w-4" />
-  Consultar
-</Button>
-
+          <Button
+            onClick={() => onInquiryClick(apartment)}
+            className="bg-primary hover:bg-primary/90"
+            size="sm"
+          >
+            <Calendar className="mr-2 h-4 w-4" />
+            Consultar
+          </Button>
         </div>
       </div>
     </motion.div>
   );
 };
-
 
 const Apartments = ({ onInquiry }) => {
   return (

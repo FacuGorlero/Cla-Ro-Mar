@@ -37,7 +37,6 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Inicio', href: '#inicio', sectionId: 'inicio' },
     { name: 'Departamentos', href: '#departamentos', sectionId: 'departamentos' },
-    { name: 'Galería', href: '#galeria', sectionId: 'galeria' },
     { name: 'Ubicación', href: '#ubicacion', sectionId: 'ubicacion' },
     { name: 'Contacto', href: '#contacto', sectionId: 'contacto' },
   ];
