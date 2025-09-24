@@ -1,12 +1,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ContactFormWrapper from '@/components/ContactFormWrapper';
+// import ContactFormWrapper from '@/components/ContactFormWrapper';
 import ContactDetails from '@/components/ContactDetails';
 
 const Contact = ({ predefinedMessage }) => {
   return (
-    <section id="contacto" className="py-20 bg-muted">
+    <section id="contacto" className="py-20 bg-muted ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -27,8 +27,8 @@ const Contact = ({ predefinedMessage }) => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <ContactFormWrapper predefinedMessage={predefinedMessage} />
+        <div className="flex justify-center">
+          {/* <ContactFormWrapper predefinedMessage={predefinedMessage} /> */}
           <ContactDetails />
         </div>
       </div>

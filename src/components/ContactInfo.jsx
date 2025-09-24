@@ -4,7 +4,8 @@ import { Phone, Mail, Calendar, MessageSquare } from 'lucide-react';
 
 const ContactInfo = () => {
   return (
-    <div className="bg-primary text-white p-8 rounded-xl shadow-lg mb-8">
+    
+    <div className="bg-primary text-white p-10 rounded-xl shadow-lg mb-8 min-h-[400px] flex flex-col justify-center">
       <h3 className="text-2xl font-bold mb-6">Información de contacto</h3>
       
       <div className="space-y-6">
