@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -14,13 +13,19 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative h-screen">
+      {/* Fondo con imagen y gradiente */}
       <div 
-        className="absolute inset-0 hero-gradient"
-        style={{ '--image-url': 'url("./images/FONDO/1000137721.jpg")' }}
+        className="absolute inset-0"
+        style={{ 
+          backgroundImage: 'url("/images/FONDO/1000137721.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90"></div>
       </div>
       
+      {/* Contenido principal */}
       <div className="relative h-full container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
         <div className="max-w-3xl">
           <motion.div
@@ -78,29 +83,30 @@ const Hero = () => {
         </div>
       </div>
       
+      {/* Info adicional abajo */}
       <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7, delay: 0.8 }}
-  className="absolute bottom-10 left-0 right-0 flex justify-center"
->
-  <div className="py-4 px-6 rounded-full flex items-center gap-6 bg-black/20 backdrop-blur-lg">
-    <div className="text-center">
-      <p className="text-white font-medium">A 200m</p>
-      <p className="text-white/80 text-sm">de la playa</p>
-    </div>
-    <div className="h-10 w-px bg-white/30"></div>
-    <div className="text-center">
-      <p className="text-white font-medium">Zona Norte</p>
-      <p className="text-white/80 text-sm">ubicación tranquila</p>
-    </div>
-    <div className="h-10 w-px bg-white/30"></div>
-    <div className="text-center">
-      <p className="text-white font-medium">Totalmente</p>
-      <p className="text-white/80 text-sm">equipados</p>
-    </div>
-  </div>
-</motion.div>
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.8 }}
+        className="absolute bottom-10 left-0 right-0 flex justify-center"
+      >
+        <div className="py-4 px-6 rounded-full flex items-center gap-6 bg-black/20 backdrop-blur-lg">
+          <div className="text-center">
+            <p className="text-white font-medium">A 200m</p>
+            <p className="text-white/80 text-sm">de la playa</p>
+          </div>
+          <div className="h-10 w-px bg-white/30"></div>
+          <div className="text-center">
+            <p className="text-white font-medium">Zona Norte</p>
+            <p className="text-white/80 text-sm">ubicación tranquila</p>
+          </div>
+          <div className="h-10 w-px bg-white/30"></div>
+          <div className="text-center">
+            <p className="text-white font-medium">Totalmente</p>
+            <p className="text-white/80 text-sm">equipados</p>
+          </div>
+        </div>
+      </motion.div>
 
     </section>
   );
