@@ -26,8 +26,6 @@ const apartmentsData = [
      " images/apartments1/4.jpg",
       "images/apartments1/5.jpg",
       "images/apartments1/6.jpg",
-      { type: "video", src: "images/apartments1/7.mp4" },
-  { type: "video", src: "images/apartments1/8.mp4" },
 
     ]
   },
