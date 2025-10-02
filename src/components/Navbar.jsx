@@ -26,12 +26,16 @@ const Navbar = () => {
   };
 
   const scrollToSection = (sectionId) => {
-    setMobileMenuOpen(false); // Close mobile menu if open
+  setMobileMenuOpen(false);
+
+  setTimeout(() => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }, 100); // espera que la animación termine un poco
+};
+
 
 
   const navLinks = [
@@ -55,9 +59,9 @@ const Navbar = () => {
               <span className={`text-xl md:text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white text-shadow'}`}>
                 CLA-RO-MAR, Villa Gesell
               </span>
-              <span className={`ml-2 text-xl md:text-2xl font-light ${isScrolled ? 'text-secondary' : 'text-white text-shadow'}`}>
+              {/* {<span className={`ml-2 text-xl md:text-2xl font-light ${isScrolled ? 'text-secondary' : 'text-white text-shadow'}`}>
                 Departamentos
-              </span>
+              </span>} */}
             </a>
           </motion.div>
 

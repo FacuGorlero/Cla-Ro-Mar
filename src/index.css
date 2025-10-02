@@ -111,3 +111,6 @@
   font-size: 16px !important; /* tamaño de la flecha */
  
 }
+html, body {
+  overflow-x: hidden;
+}
