@@ -16,21 +16,11 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xl font-bold mb-4">Departamentos Villa Gesell</h3>
+            <h3 className="text-xl font-bold mb-4">CLA-RO-MAR en Villa Gesell</h3>
             <p className="text-white/80 mb-4">
               Ofrecemos departamentos de calidad para que disfrutes de unas vacaciones inolvidables en Villa Gesell.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-secondary transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </div>
+          
           </motion.div>
           
           <motion.div
@@ -46,9 +36,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#departamentos" className="text-white/80 hover:text-secondary transition-colors">Departamentos</a>
-              </li>
-              <li>
-                <a href="#galeria" className="text-white/80 hover:text-secondary transition-colors">Galería</a>
               </li>
               <li>
                 <a href="#ubicacion" className="text-white/80 hover:text-secondary transition-colors">Ubicación</a>
@@ -69,18 +56,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 mt-0.5" />
-                <span className="text-white/80">info@departamentosvillagesell.com</span>
+                <span className="text-white/80">claromar.vg@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 mt-0.5" />
-                <span className="text-white/80">+54 9 11 1234-5678</span>
+                <span className="text-white/80">+54 9 11 3174-7845</span>
               </li>
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-white/80">Avenida Buenos Aires 1234, Villa Gesell, Buenos Aires, Argentina</span>
+                <span className="text-white/80">Esquina 135 y Av 2, Villa Gesell, Buenos Aires, Argentina.</span>
               </li>
             </ul>
           </motion.div>
@@ -95,26 +82,22 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex justify-between">
                 <span className="text-white/80">Lunes - Viernes:</span>
-                <span className="text-white">9:00 - 20:00</span>
+                <span className="text-white">10:00 - 20:00</span>
               </li>
               <li className="flex justify-between">
-                <span className="text-white/80">Sábados:</span>
-                <span className="text-white">10:00 - 15:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span className="text-white/80">Domingos:</span>
-                <span className="text-white">Cerrado</span>
+                <span className="text-white/80">Sábados y Domingos:</span>
+                <span className="text-white">11:00 - 19:00</span>
               </li>
             </ul>
             <p className="mt-4 text-white/80">
-              *Durante temporada alta atendemos todos los días.
+              *Durante temporada alta atendemos hasta las 23:00.
             </p>
           </motion.div>
         </div>
         
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-white/60">
-            © {currentYear} Departamentos Villa Gesell. Todos los derechos reservados.
+            © {currentYear} CLA-RO-MAR Villa Gesell. Todos los derechos reservados.
           </p>
         </div>
       </div>

@@ -11,79 +11,91 @@ import "swiper/css/navigation";
 const apartmentsData = [
   {
     id: 1,
-    name: 'Departamento Familiar',
-    description: 'Amplio departamento con vista al jardín...',
+    name: 'Esquina 135 y Av 2',
+    description: 'Amplio departamento para 6 personas a pocas cuadras de la playa.',
     capacity: '6 personas',
     bedrooms: '2 dormitorios',
     bathrooms: '1 baño',
-    size: '65m²',
-    price: '$15,000',
+    size: 'Cochera cubierta',
+    price: 'Solicita tu tarifa',
     priceDetail: 'por noche en temporada alta',
     images: [
-      "images/apartments1/IMG-20250102-WA0022.jpg",
-      "images/apartments1/IMG-20250102-WA0023.jpg",
-      "images/apartments1/IMG-20250102-WA0024~2.jpg",
-     " images/apartments1/IMG-20250102-WA0025~2.jpg",
-      "images/apartments1/IMG-20250102-WA0027.jpg",
-      "images/apartments1/IMG-20250102-WA0028~2.jpg",
-      "images/apartments1/IMG-20250102-WA0029~2.jpg",
-      "images/apartments1/IMG-20250102-WA0030.jpg",
-      "images/apartments1/IMG-20250102-WA0031.jpg",
-      "images/apartments1/IMG-20250102-WA0033~2.jpg",
-      "images/apartments1/IMG-20250102-WA0034~2.jpg",
-      "images/apartments1/IMG-20250102-WA0035~2.jpg",
-     " images/apartments1/IMG-20250103-WA0010.jpg",
-      "images/apartments1/IMG-20250103-WA0011.jpg",
-      "images/apartments1/IMG-20250103-WA0012.jpg",
-      "images/apartments1/IMG-20250103-WA0013.jpg",
-      "images/apartments1/IMG-20250103-WA0014.jpg",
-      "images/apartments1/IMG-20250103-WA0016.jpg",
-      "images/apartments1/IMG-20250103-WA0017.jpg",
-      "images/apartments1/IMG-20250103-WA0019.jpg",
-      "images/apartments1/IMG-20250103-WA0020.jpg",
-      "images/apartments1/IMG-20250103-WA0021.jpg",
-      "images/apartments1/IMG-20250103-WA0022.jpg",
-    "  images/apartments1/IMG-20250103-WA0023.jpg",
-      "images/apartments1/IMG-20250103-WA0024.jpg",
-      "images/apartments1/IMG-20250103-WA0025.jpg",
-      "images/apartments1/IMG-20250103-WA0026.jpg",
-      "images/apartments1/IMG-20250103-WA0027.jpg",
-      "images/apartments1/IMG-20250103-WA0028.jpg",
-      
-
+      "images/apartments1/1.jpg",
+      "images/apartments1/2.jpg",
+      "images/apartments1/3.jpg",
+     " images/apartments1/4.jpg",
+      "images/apartments1/5.jpg",
+      "images/apartments1/6.jpg",
+      { type: "video", src: "images/apartments1/7.mp4" },
+  { type: "video", src: "images/apartments1/8.mp4" },
 
     ]
   },
   {
     id: 2,
-    name: 'Suite Deluxe',
-    description: 'Departamento de lujo con vista parcial al mar...',
-    capacity: '4 personas',
+    name: 'Calle 137 entre Av 5 y 6',
+    description: 'Amplio chalet para 8 personas con jardin.',
+    capacity: '8 personas',
     bedrooms: '2 dormitorios',
-    bathrooms: '2 baños',
-    size: '55m²',
-    price: '$18,000',
+    bathrooms: '1 baño',
+    size: 'Cochera descubierta',
+    price: 'Solicita tu tarifa',
     priceDetail: 'por noche en temporada alta',
     images: [
-      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1618221214613-1e53301c5dcf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+      "images/apartment 2/1.jpg",
+      "images/apartment 2/2.jpg",
+      "images/apartment 2/3.jpg",
+      "images/apartment 2/4.jpg",
+      "images/apartment 2/5.jpg",
+      "images/apartment 2/6.jpg",
+      "images/apartment 2/7.jpg",
+      "images/apartment 2/8.jpg",
+      "images/apartment 2/9.jpg",
+      "images/apartment 2/10.jpg",
+      "images/apartment 2/11.jpg",
+      "images/apartment 2/12.jpg",
+      "images/apartment 2/13.jpg",
     ]
   },
   {
     id: 3,
-    name: 'Monoambiente Costero',
-    description: 'Acogedor monoambiente a pocas cuadras de la playa...',
-    capacity: '2 personas',
-    bedrooms: '1 ambiente',
+    name: 'Esquina 138 y Av 2',
+    description: 'Amplio departamento para 6 personas a pocas cuadras de la playa.',
+    capacity: '6 personas',
+    bedrooms: '1 y 1/2 dormitorios',
     bathrooms: '1 baño',
-    size: '35m²',
-    price: '$12,000',
+    size: 'Cochera cubierta',
+    price: 'Solicita tu tarifa',
     priceDetail: 'por noche en temporada alta',
     images: [
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+      "images/apartment 3/1.jpg",
+      "images/apartment 3/2.jpg",
+      "images/apartment 3/3.jpg",
+      "images/apartment 3/4.jpg",
+      "images/apartment 3/5.jpg",
+      "images/apartment 3/6.jpg",
+      "images/apartment 3/7.jpg",
+      "images/apartment 3/8.jpg",
+      "images/apartment 3/9.jpg",
+      "images/apartment 3/10.jpg",
+      "images/apartment 3/11.jpg",
+      "images/apartment 3/12.jpg",
+      "images/apartment 3/13.jpg",
+      "images/apartment 3/14.jpg",
+      "images/apartment 3/15.jpg",
+      "images/apartment 3/16.jpg",
+      "images/apartment 3/17.jpg",
+      "images/apartment 3/18.jpg",
+      "images/apartment 3/19.jpg",
+      "images/apartment 3/20.jpg",
+      "images/apartment 3/21.jpg",
+      "images/apartment 3/22.jpg",
+      "images/apartment 3/23.jpg",
+      "images/apartment 3/24.jpg",
+      "images/apartment 3/25.jpg",
+      "images/apartment 3/26.jpg",
+      "images/apartment 3/27.jpg",
+      "images/apartment 3/28.jpg",
     ]
   }
 ];
@@ -100,7 +112,7 @@ const ApartmentCard = ({ apartment, onInquiryClick, index }) => {
     >
       {/* Carrusel de imágenes */}
       <div className="relative h-64 overflow-hidden">
-        <Swiper
+       <Swiper
   modules={[Navigation, Autoplay]}
   spaceBetween={10}
   slidesPerView={1}
@@ -109,21 +121,30 @@ const ApartmentCard = ({ apartment, onInquiryClick, index }) => {
   navigation
   className="h-full"
 >
-  {apartment.images.map((img, i) => (
+  {apartment.images.map((item, i) => (
     <SwiperSlide key={i}>
       <div
         onClick={() => onInquiryClick(apartment)}
         className="cursor-pointer h-full w-full overflow-hidden"
       >
-        <img
-          src={img}
-          alt={`${apartment.name} ${i + 1}`}
-          className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
-        />
+        {typeof item === "string" ? (
+          <img
+            src={item}
+            alt={`${apartment.name} ${i + 1}`}
+            className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
+          />
+        ) : item.type === "video" ? (
+          <video
+            src={item.src}
+            controls
+            className="w-full h-full object-cover rounded-lg"
+          />
+        ) : null}
       </div>
     </SwiperSlide>
   ))}
 </Swiper>
+
 
 
         {/* Precio flotante */}

@@ -12,7 +12,7 @@ const features = [
   {
     icon: <Tv className="h-10 w-10 text-primary" />,
     title: 'Smart TV',
-    description: 'Televisores con Netflix y servicios de streaming incluidos.'
+    description: 'Televisores Smart para disfrutar de tus series favoritas.'
   },
   {
     icon: <Utensils className="h-10 w-10 text-primary" />,
@@ -27,7 +27,7 @@ const features = [
   {
     icon: <Car className="h-10 w-10 text-primary" />,
     title: 'Estacionamiento',
-    description: 'Cochera privada para tu vehículo sin costo adicional.'
+    description: 'Cochera techada para tu vehículo sin costo adicional.'
   },
   {
     icon: <Video className="h-10 w-10 text-primary" />,

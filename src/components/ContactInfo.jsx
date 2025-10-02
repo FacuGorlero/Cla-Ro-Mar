@@ -13,8 +13,8 @@ const ContactInfo = () => {
           <Phone className="h-6 w-6 mr-4 mt-1" />
           <div>
             <p className="font-medium">Teléfono</p>
-            <p className="text-white/80">+54 9 11 1234-5678</p>
-            <p className="text-white/80">+54 9 11 5678-1234</p>
+            <p className="text-white/80">+54 9 11 3174-7845</p>
+            <p className="text-white/80">022 55 465489</p>
           </div>
         </div>
         
@@ -22,8 +22,7 @@ const ContactInfo = () => {
           <Mail className="h-6 w-6 mr-4 mt-1" />
           <div>
             <p className="font-medium">Email</p>
-            <p className="text-white/80">info@departamentosvillagesell.com</p>
-            <p className="text-white/80">reservas@departamentosvillagesell.com</p>
+            <p className="text-white/80">claromar.vg@gmail.com</p>
           </div>
         </div>
         
@@ -31,8 +30,8 @@ const ContactInfo = () => {
           <Calendar className="h-6 w-6 mr-4 mt-1" />
           <div>
             <p className="font-medium">Horario de atención</p>
-            <p className="text-white/80">Lunes a Viernes: 9:00 - 20:00</p>
-            <p className="text-white/80">Sábados: 10:00 - 15:00</p>
+            <p className="text-white/80">Lunes a Viernes: 10:00 - 20:00</p>
+            <p className="text-white/80">Sábados y Domingos: 11:00 - 19:00</p>
           </div>
         </div>
         
@@ -40,7 +39,7 @@ const ContactInfo = () => {
           <MessageSquare className="h-6 w-6 mr-4 mt-1" />
           <div>
             <p className="font-medium">WhatsApp</p>
-            <p className="text-white/80">+54 9 11 1234-5678</p>
+            <p className="text-white/80">+54 9 11 3174-7845</p>
             <p className="text-white/80">Respuesta inmediata</p>
           </div>
         </div>

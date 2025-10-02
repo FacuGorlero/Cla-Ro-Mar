@@ -14,7 +14,7 @@ const Location = () => {
             Nuestra <span className="text-primary">Ubicación</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Ubicados en una zona privilegiada de Villa Gesell, en CLA-RO-MAR, a pocos pasos de la playa y cerca de todos los servicios.
+            Ubicados en una zona tranquila de Villa Gesell, en CLA-RO-MAR, a pocos metros de la playa y cerca de todos los servicios.
           </p>
         </div>
 
@@ -32,7 +32,9 @@ const Location = () => {
               </h3>
               <p className="text-muted-foreground mb-6">
                 CLA-RO-MAR<br />
-                Villa Gesell, Provincia de Buenos Aires, Argentina
+                Esquina 135 y Av 2, Villa Gesell, Provincia de Buenos Aires, Argentina<br></br>
+                Esquina 138 y Av 2, Villa Gesell, Provincia de Buenos Aires, Argentina<br></br>
+                C.137 Entre Av 5 y 6, Villa Gesell, Provincia de Buenos Aires, Argentina
               </p>
 
               <h3 className="text-xl font-bold mb-4 flex items-center">
@@ -65,9 +67,9 @@ const Location = () => {
                 Servicios Cercanos
               </h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Supermercados y proveedurías</li>
-                <li>Restaurantes y bares</li>
-                <li>Actividades recreativas</li>
+                <li>Supermercados y almacenes</li>
+                <li>Restaurantes y deliverys</li>
+                <li>Paseos de artesanos</li>
               </ul>
             </div>
           </motion.div>

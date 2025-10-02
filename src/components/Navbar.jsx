@@ -53,7 +53,7 @@ const Navbar = () => {
           >
             <a href="#" onClick={() => scrollToSection('inicio')} className="flex items-center">
               <span className={`text-xl md:text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white text-shadow'}`}>
-                Villa Gesell
+                CLA-RO-MAR, Villa Gesell
               </span>
               <span className={`ml-2 text-xl md:text-2xl font-light ${isScrolled ? 'text-secondary' : 'text-white text-shadow'}`}>
                 Departamentos
@@ -90,7 +90,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('contacto')}
             >
               <Phone className="mr-2 h-4 w-4" />
-              Reservar Ahora
+              Contactanos
             </Button>
           </motion.div>
 

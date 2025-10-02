@@ -16,7 +16,7 @@ const Hero = () => {
     <section id="inicio" className="relative h-screen">
       <div 
         className="absolute inset-0 hero-gradient"
-        style={{ '--image-url': 'url("https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")' }}
+        style={{ '--image-url': 'url("./images/FONDO/1000137721.jpg")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90"></div>
       </div>
@@ -39,7 +39,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white text-shadow mb-4"
           >
-            Departamentos de Playa <br />
+            Departamentos <br />
             <span className="text-secondary">en Villa Gesell</span>
           </motion.h1>
           
@@ -49,7 +49,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-lg md:text-xl text-white text-shadow mb-8 max-w-2xl"
           >
-            Disfruta de unas vacaciones inolvidables a pasos del mar. Departamentos completamente equipados con la mejor ubicación.
+            Disfruta de unas vacaciones inolvidables a pocas cuadras del mar. Departamentos completamente equipados con excelente ubicación.
           </motion.p>
           
           <motion.div 
@@ -79,28 +79,29 @@ const Hero = () => {
       </div>
       
       <motion.div 
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.8 }}
-        className="absolute bottom-10 left-0 right-0 flex justify-center"
-      >
-        <div className="glass-card py-4 px-6 rounded-full flex items-center gap-6">
-          <div className="text-center">
-            <p className="text-white font-medium">A 200m</p>
-            <p className="text-white/80 text-sm">de la playa</p>
-          </div>
-          <div className="h-10 w-px bg-white/30"></div>
-          <div className="text-center">
-            <p className="text-white font-medium">Zona Norte</p>
-            <p className="text-white/80 text-sm">ubicación privilegiada</p>
-          </div>
-          <div className="h-10 w-px bg-white/30"></div>
-          <div className="text-center">
-            <p className="text-white font-medium">Totalmente</p>
-            <p className="text-white/80 text-sm">equipados</p>
-          </div>
-        </div>
-      </motion.div>
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.8 }}
+  className="absolute bottom-10 left-0 right-0 flex justify-center"
+>
+  <div className="py-4 px-6 rounded-full flex items-center gap-6 bg-black/20 backdrop-blur-lg">
+    <div className="text-center">
+      <p className="text-white font-medium">A 200m</p>
+      <p className="text-white/80 text-sm">de la playa</p>
+    </div>
+    <div className="h-10 w-px bg-white/30"></div>
+    <div className="text-center">
+      <p className="text-white font-medium">Zona Norte</p>
+      <p className="text-white/80 text-sm">ubicación tranquila</p>
+    </div>
+    <div className="h-10 w-px bg-white/30"></div>
+    <div className="text-center">
+      <p className="text-white font-medium">Totalmente</p>
+      <p className="text-white/80 text-sm">equipados</p>
+    </div>
+  </div>
+</motion.div>
+
     </section>
   );
 };

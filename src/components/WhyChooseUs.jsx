@@ -3,10 +3,12 @@ import React from 'react';
 
 const WhyChooseUs = () => {
   const reasons = [
-    "Más de 15 años de experiencia en alquileres temporarios",
-    "Departamentos totalmente equipados y renovados",
-    "Excelente ubicación a pasos de la playa",
-    "Atención personalizada durante toda tu estadía"
+    "Más de 45 años de experiencia en alquileres",
+    "Departamentos totalmente equipados y limpios",
+    "Excelente ubicación a pocas cuadras de la playa",
+    "Excelente atención durante toda tu estadía",
+    "Atendido por sus dueños",
+    "Contamos con inquilinos que nos visitan desde hace más de 30 años!."
   ];
 
   return (
